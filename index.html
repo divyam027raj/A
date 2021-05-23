@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <title>ASVA Labs.</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <a class="navbar-brand" href="#">ASVA Labs</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Products
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">ASVA Finance</a>
+              <a class="dropdown-item" href="#">ASVA Space</a>
+
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+      </div>
+    </nav>
+  </header>
+  <div class="mid text-center">
+    <img class="embed-responsive" src="img/fin_analysis.gif">
+    <div class="hero">
+      <h1 class="text-dark display-5 font-weight-bold">Fueling next-gen interoperable applications</h1>
+    </br></br></br></br></br>
+
+      <div class="console-container"><span id="text"></span>
+        <div class="console-underscore" id="console">&#95;</div>
+      </div>
+      <script>
+        consoleText(['Accelerating Defi mainstream', 'The future of virtual universe powered by NFTs', 
+        'Changing the landscape of Digital ownership'], 
+        'text', ['black', 'black', 'black']);
+        function consoleText(words, id, colors){
+          if(colors== undefined) color=['#000'];
+          var vasible=true;
+          var con= document.getElementById('console');
+          var letterCount=1;
+          var x=1;
+          var waiting=false;
+          var target= document.getElementById(id)
+          target.setAttribute('style','color:'+colors[0])
+          window.setInterval(function(){
+            if (letterCount=== 0 && waiting === false){
+              waiting=true;
+              target.innerHTML = words[0].substring(0,letterCount)
+              window.setTimeout (function(){
+                var usedcolor = colors.shift();
+                colors.push(usedcolor);
+                var usedword= words.shift();
+                words.push(usedword);
+                x=1;
+                target.setAttribute('style','color:'+colors[0])
+                letterCount +=x;
+                waiting=false;
+              },1000)
+            }else if (letterCount == words[0].length + 1 && waiting === false){
+              waiting=true;
+              window.setTimeout (function(){
+                x=-1;
+                letterCount +=x;
+                waiting = false;
+              },1000)
+            }else if (waiting ===false){
+              target.innerHTML= words[0].substring(0, letterCount)
+              letterCount += x;
+            }
+          },120)
+          window.setInterval (function(){
+            if(isible ===true){
+              con.className= 'console-underscore hidden'
+              visible = false;
+            }else
+            {
+              con.className='console-underscore'
+              visible=true;
+            }
+          },400)
+        }
+      </script>
+      <a class=" text-dark font-weight-bold btn-lg " href="#">Black Paper</a>
+      <a class=" text-dark font-weight-bold btn-lg" href="#">Contact</a>
+    </div>
+  </div>
+  <section class="focus text-center  py-10">
+    <p class="mainheading text-light display-10 font-weight-bold ">Focus areas</p>
+
+    <div class="focus__para">
+        <h1 class="number">01</h1>
+        <div class="content">
+            <h2 class="heading">Decentralized Finance</h2>
+            <p class="text "><span style="color: #fdfafb">
+                    Avant-garde financial innovation, eliminating the role of
+                    intermediaries. Provides pragmatic accessibility to users with
+                    diverse financial services across the blockchain network with the
+                    benefits of high security, interoperability, transparency, and
+                    confidentiality among several others.</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="focus__para">
+        <h1 class="number">02</h1>
+        <div class="content">
+            <h2 class="heading">Non fungible tokens</h2>
+            <p class="text"><span style="color: #fcf8fa">
+                    Unique cryptographic tokens that depict a license to an asset in
+                    the blockchain ecosystem. Their uniqueness can be utilized in
+                    implementing digital ownership for the assets among varied
+                    domains.</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="focus__para">
+        <h1 class="number">03</h1>
+        <div class="content">
+            <h2 class="heading">Metaverse</h2>
+            <p class="text"><span style="color: #fcfafb">
+                    A decentralized virtual world built over blockchain technology,
+                    where the user is represented by an avatar. The user avatars can
+                    buy or sell digital assets or even create their own universes
+                    inside the metaverse.</span>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="technology text-center">
+  <div class="container">
+      <div class="row">
+          <div class="text ">
+              <h1 class="display-10 font-weight-bold"><span style="color: #fe0074">Technology</span></h1>
+              </br>
+              <h3 class="display-10 font-weight-bold"><span style="color: #0c0b0b">We build interoperable
+                      applications for Defi, NFT and Metaverse
+                      under the aegis of Polkadot, with
+                      Substrate being its development framework.</span></h3>
+
+              <h4><img class="img-fluid" src="https://asvalabs.web.app/assets/images/homepage/substrate.png"
+                      width="10%"> <img class="img-fluid" src="img/polkadot-logo.png" alt="" width="250"
+                      height="100"></h4>
+
+          </div>
+      </div>
+  </div>
+</section>
+<section class="Products  py-5">
+  <h1 class="text-center display- 15 font-weight-bold"><span style="color: #fe0074">Products</span></h1>
+  <div class="row align-item-center container my-5 mx-auto">
+      <div class="text col-lg-6 col-md-6 col-12 w-50 ">
+          <h2>Asva Finance</h2>
+          <p>A cross-chain money market for digital assets towards a interoperable Defi future</p>
+          <button class="btn btn-outline-light " type="submit">Launch</button>
+      </div>
+      <div class="img col-lg-6 col-md-6 col-12 w-50 ">
+          <img class="img-fluid" src="https://asvalabs.web.app/assets/images/homepage/asva-finance.png">
+
+      </div>
+  </div>
+  </br>
+  <div class="row align-item-center container my-5 mx-auto">
+      <div class="text col-lg-6 col-md-6 col-12 w-50 ">
+          <h2>Asva virtua space</h2>
+          <p>A virtual world based on blockchain technology that encircles Virtual Identities and their Virtual
+              Assets through NFTs</p>
+          <button class="btn btn-outline-light " type="submit">Launch</button>
+      </div>
+      <div class="img col-lg-6 col-md-6 col-12 w-50 ">
+          <img class="img-fluid" src="https://asvalabs.web.app/assets/images/homepage/asva-virtua.png">
+
+      </div>
+  </div>
+</section>
+<section class="backedby text-center">
+  <div class="container text-center">
+    <h1 class="display-10 font-weight-bold"><span style="color: #fe0074">Backed By</span></h1>
+  </br>
+
+      <nav>
+        <ul>
+          <li><a class="display-5 font-weight-bold" href=""#>Validator</a></li>
+          <li><a class="display-5 font-weight-bold" href=""#>EcoSystem</a></li>
+          <li><a class="display-5 font-weight-bold" href=""#>Investor</a></li>
+        </ul>
+      </nav>
+
+  </div>
+  <div class="container">
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="home"
+      role="tabpanel"
+      aria-labelledby="home-tab"
+    >
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img
+            src="img/polkadot-logo.png" width="150px"
+            alt="polkadot"
+          />
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <img
+            src="https://asvalabs.web.app/assets/images/homepage//backedby/design.png" width="150px"
+            alt="design"
+          />
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <img
+            src="https://asvalabs.web.app/assets/images/homepage//backedby/polygon.png" width="150px"
+            alt="polygon"
+          />
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <img
+            src="https://asvalabs.web.app/assets/images/homepage//backedby/binance-smart.svg"width="150px"
+            alt="binance-smart"
+          />
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
+<section id="subscribe">
+  <!--<h2 class="subscribe-heading display-10 font-weight-bold" style="color: #000">
+    Subscribe to our Daily Newsletter <br /><br />
+    <a href="mailto:contact@asvalabs.com" style="color: #fe0074"
+      ><h3 class="subscribe-heading">contact@asvalabs.com</h3></a
+    >
+  </h2>
+  <div class="buttonInside">
+    <input
+      id="subscribe-email"
+      type="email"
+      placeholder="Enter your mail id"
+    />
+    <button id="send-btn">
+      <img
+        class="send-btn-img"
+        src="img/download (1).png" width="30px"
+        alt="send btn"
+      />
+    </button>
+  </div>-->
+<div class="container">
+  <form action="">
+    <h2 class="subscribe-heading display-10 font-weight-bold" style="color: #000">
+      Subscribe to our Daily Newsletter <br /><br />
+      <a href="mailto:contact@asvalabs.com" style="color: #fe0074"
+        ><h3 class="subscribe-heading">contact@asvalabs.com</h3></a
+      >
+    </h2>
+    <div class="email-box">
+      <i class="bi bi-envelope-fill"></i>
+      <input class="tbox" type="email" name="" value="" placeholder="Enter your email id">
+      <button class="btn" type="button" name="button">Subscribe</button>
+    </div>
+
+  </form>
+</div>
+
+  
+</section>
+
+<footer id="footer">
+  <div class="footer-top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-6 footer-links">
+                  <h4></h4>
+                  <ul>
+                      <li><a class="display-5 font-weight-bold" href="#"><span style="color: #fe0074">ASVA Labs.</span></a></li>
+                      
+                  </ul>
+              </div>
+
+              <div class="col-lg-4 col-md-6 footer-links">
+                  
+                  <ul>
+                      <li>
+                          <i class="bx bx-chevron-right"></i>
+                          <a href="#"><span style="color: #fe0074">Product</span></a>
+                      </li>
+                      <li>
+                          <i class="bx bx-chevron-right"></i>
+                          <a href="#product"><span style="color: #fe0074">Technology</span></a>
+                      </li>
+                      <li>
+                          <i class="bx bx-chevron-right"></i>
+                          <a href="assets/litepaper.pdf" target="_blank"><span
+                                  style="color: #fe0074">Team</span></a>
+                      </li>
+                      <li>
+                          <i class="bx bx-chevron-right"></i>
+                          <a href="about.html"><span style="color: #fe0074">Contact</span></a>
+                      </li>
+                      <li>
+                        <i class="bx bx-chevron-right"></i>
+                        <a href="#"><span style="color: #fe0074">Asva branding kit</span></a>
+                    </li>
+                    <li>
+                      <i class="bx bx-chevron-right"></i>
+                      <a href="#"><span style="color: #fe0074">Asva partnership formt</span></a>
+                  </li>
+                  </ul>
+              </div>
+
+              <div class="col-lg-4 col-md-6 footer-newsletter">
+                  <h4>Connect With Us</h4>
+                  <div class="social-links mt-3">
+                    <a href="https://twitter.com/asvafinance" class="twitter" target="_blank">
+
+                        <i class="bi bi-twitter"></i></a>
+                    <a href="https://t.me/asvafinance" class="telegram" target="_blank">
+                        <i class="bi bi-telegram"></i></a>
+                    <a href="https://www.linkedin.com/company/71280081" class="linkedin" target="_blank">
+                        <i class="bi bi-linkedin"></i></a>
+                   
+                    <a href="https://www.facebook.com/asvafinance" class="facebook" target="_blank">
+                        <i class="bi bi-facebook"></i></a>
+
+                </div>
+          </div>
+      </div>
+  </div>
+  <div class="copyright text-center">&copy; Copyright ASVA Finance</div>
+
+</footer>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
